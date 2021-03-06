@@ -20,14 +20,14 @@ contract IPRegistry is ERC721Full {
 
     event Appraisal(uint token_id, uint appraisal_value, string token_uri);
 
-    function registerIP(address owner, string memory ip_name, string memory creator, uint initial_value, string memory token_uri) public returns(uint) {
+    function registerIP(address owner, string memory ip_name, string memory creator, uint appraisal_value, string memory token_uri) public returns(uint) {
         token_ids.increment();
         uint token_id = token_ids.current();
 
         _mint(owner, token_id);
         _setTokenURI(token_id, token_uri);
 
-        ip_collection[token_id] = Intellectual_Property(ip_name, creator, initial_value);
+        ip_collection[token_id] = Intellectual_Property(ip_name, creator, appraisal_value);
 
         return token_id;
     }
@@ -40,4 +40,3 @@ contract IPRegistry is ERC721Full {
         return ip_collection[token_id].appraisal_value;
     }
 }
- 
