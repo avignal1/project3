@@ -1,0 +1,73 @@
+Project 3: eCommerce on blockchain
+Team #5 Members : Rawlric Sumner, Umme Arusha, Andrew Vignali, Priya Roy, Fazle Hameem, Minyeong Han
+
+
+Overview
+We are building an eCommerce on blockchain using a smart contract in solidity using the 1155 ERC standards to buy and sell both fungible and non-fungible items.
+
+We will pick two item examples such as book and painting, 
+
+We will publish our work into Github Page at last.
+
+
+Questions to Answer
+What is a Blockchain marketplace?
+It is an online shopping marketplace that is run from a blockchain rather than a single central authority. Data is held on a set of decentralized computers or nodes and is stored in blocks that are linked in sequence to form a chain.
+Advantages/value of using a blockchain marketplace
+Blockchain marketplace is more valuable for certain type of products: globally accessible products, something global and difficult to transfer/move -> marketplace on blockchain is easier to transfer as physical movement is not needed. 
+Commodities such as gold, silver, rare gems : security risk -> we don’t want to move around, keep it safe -> blockchain is useful!
+
+<Minimum contracts WE NEED>
+Fungible item contract 
+Non-fungible item contract (tokenize the item)
+Marketplace contract (selling, loss event, refund)
+Logistic contract (for shipping)
+
+For Intellectual Properties:
+Patents.
+Trademarks.
+Trade Secrets.
+Copyright
+
+1.Tokenzing contract
+2.Auction contract
+3.Marketplace contract
+
+
+
+Proposed Tasks
+Solidity smart contract - all of us
+
+Deck outline - Priya
+
+
+Technology we are using:
+ Wallet Standards 
+ Solidity 
+ Ganache
+
+Network:
+Ropsten testnet
+
+Tokens: 
+Intellectual property (trademarks -> logos)
+
+Contracts
+Tokenization Contract - see monalisa example - Umme, M H, Andrew
+Events: PatentYear, Industry, appraisal value,
+Market Contract
+Auction Contract
+Fazlee - overall business 
+
+
+Plan
+
+One tokenization contract that tokenizes all of the items in our marketplace - ArtRegistry, unique token id regardless of patent/trademark etc.
+	Variable number 1 - Unique_id1 - Nile trademark image
+Variable number 2 - shares float (number of shares is variable)
+	
+	Use Pinata to get token_uri
+
+Make function that creates tokens for unique ids
+
+One contract for Auction/Marketplace - MartianAuction (22-3-1)
