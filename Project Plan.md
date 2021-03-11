@@ -31,16 +31,16 @@ Our payment process will be using cryptocurrencies. This allows transactions wit
 
 
 # Smart contracts intended: 
-Fungible item contract 
-Non-fungible item contract (tokenize the item)
-Marketplace contract (selling, loss event, refund)
-Logistic contract (for shipping)
+- Fungible item contract 
+- Non-fungible item contract (tokenize the item)
+- Marketplace contract (selling, loss event, refund)
+- Logistic contract (for shipping)
 
 # What does Intellectual Properties include?
-Patents.
-Trademarks.
-Trade Secrets.
-Copyright
+- Patents.
+- Trademarks.
+- Trade Secrets.
+- Copyright
 
 # Task: 
 1.Tokenzing contract
@@ -56,9 +56,9 @@ Deck outline - Priya
 
 
 # Technology we are using:
- Wallet Standards 
- Solidity 
- Ganache
+ - Wallet Standards 
+ - Solidity 
+ - Ganache
 
 # Network:
 Ropsten testnet
@@ -67,11 +67,11 @@ Ropsten testnet
 Intellectual property (trademarks -> logos)
 
 # Contracts
-Tokenization Contract - Umme, M H, Andrew
-Events: Patent, Year, Industry, appraisal value,
-Market Contract - Rawlric, Priya
-Auction Contract - Rawlric, Priya
-Overall business - Fazle
+- Tokenization Contract - Umme, M H, Andrew
+- Events: Patent, Year, Industry, appraisal value,
+- Market Contract - Rawlric, Priya
+- Auction Contract - Rawlric, Priya
+- Overall business - Fazle
 
 
 ## Plan
