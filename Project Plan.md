@@ -10,7 +10,7 @@ A decentralized secure marketplace to trade patents
 
 
 ## Overview
-We are building an e-commerce on blockchain using a smart contract in solidity. Our goal would be to use the 1155 ERC standards to buy and sell both fungible and non-fungible items. The buyers and sellers will be able to use our service on interfaces designed using UI/UX. We are going to be an open source market but our sellers will be protected from their intellectual property being stolen. 
+We are building an e-commerce on blockchain using a smart contract in solidity. Our goal would be to use the ERC721 standards to buy and sell  non-fungible items. The buyers and sellers will be able to use our service on interfaces designed using UI/UX. We are going to be an open source market but our sellers will be protected from their intellectual property being stolen. 
 
 
 ## Question to Answer
