@@ -16,7 +16,10 @@ Blockchain Marketplace for Intellectual Properties using cutting edge Auction Sm
 ## Composition of our Smart Contracts
 - Registration of IP
 - Auction/Marketplace
-- Completing Transaction
+1. Bidding
+2. Completing transaction
+3. Withdrawing
+
 
 
 
