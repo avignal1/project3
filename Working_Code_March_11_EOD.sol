@@ -1,3 +1,4 @@
+
 pragma solidity ^0.5.5;
 // Importing SafeMath 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/math/SafeMath.sol";
@@ -55,14 +56,14 @@ contract Auction {
         require(msg.sender != beneficiary);
         _;
     }
-    function bid(address payable bidder) public payable {
+    function bid(address payable bidder, uint bidAmount) public payable {
         require(!auctionEnded, "IPs are no longer available for auction.");
-        require(msg.value > highestBid, "Your bid is lower than the current highest price.");
-        if (highestBid != 0) {
-            ListOfBids[highestBidder] = highestBid;
+        require(bidAmount > highestBid, "Your bid is lower than the current highest price.");
+        if (bidAmount != 0) {
+            ListOfBids[bidder] = bidAmount;
         }
         highestBidder = bidder;
-        highestBid = msg.value;
+        highestBid = bidAmount;
         emit BidIncrease(highestBidder, highestBid);
     }    
     // Placing bid; owner is umable to place bid, prevents articifical inflation of price 
