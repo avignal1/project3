@@ -1,4 +1,3 @@
-
 pragma solidity ^0.5.5;
 // Importing SafeMath 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/math/SafeMath.sol";
@@ -33,8 +32,8 @@ contract IPRegistry is ERC721Full {
     }
 }
 contract Auction {
-    address owner;
-    address payable private beneficiary; 
+    address deployer;
+    address payable public beneficiary; 
     string ip_name;
     uint public newAppraisal;
     string public token_uri;
@@ -45,25 +44,27 @@ contract Auction {
     mapping(address => uint) public ListOfBids;
     event BidIncrease(address bidder, uint amount);
     event AuctionEnded(address winner, uint amount);
-    constructor(address payable _owner, string memory _title, uint _startPrice, string memory _description) public {
-        owner = msg.sender;
-        beneficiary = _owner;
-        ip_name = _title;
-        newAppraisal= _startPrice;
-        token_uri = _description;
+    
+    constructor(address payable _beneficiary) public {
+        deployer = msg.sender;
+        beneficiary = _beneficiary;
     }
+    
     modifier notOwner(){
         require(msg.sender != beneficiary);
         _;
     }
-    function bid(address payable bidder, uint bidAmount) public payable {
-        require(!auctionEnded, "IPs are no longer available for auction.");
-        require(bidAmount > highestBid, "Your bid is lower than the current highest price.");
-        if (bidAmount != 0) {
-            ListOfBids[bidder] = bidAmount;
+    function bid(address payable bidder) public payable {
+        require(!auctionEnded, "The auction has ended.");
+        require(msg.value > highestBid, "Bid is to low.");
+        
+        if(highestBid != 0) {
+            ListOfBids[highestBidder] = highestBid;
         }
+        
         highestBidder = bidder;
-        highestBid = bidAmount;
+        highestBid = msg.value;
+        
         emit BidIncrease(highestBidder, highestBid);
     }    
     // Placing bid; owner is umable to place bid, prevents articifical inflation of price 
@@ -83,7 +84,7 @@ contract Auction {
     }
     function endAuction() public {
         require(!auctionEnded, "You too late! Auction been done.");
-        require(msg.sender == owner, "You are not the beneficiary.");
+        require(msg.sender == deployer, "You are not the beneficiary.");
         auctionEnded = true;
         emit AuctionEnded(highestBidder, highestBid);
         beneficiary.transfer(highestBid);
