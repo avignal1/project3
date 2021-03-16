@@ -25,10 +25,10 @@ The goal of Nile Marketplace is to enable trades on a decentralized platform. An
 ## Architecture Overview
 The party wishing to sell intellectual property creates a new auction, after which the potential buyers can submit their bids. The bidding time lasts indefinitely, giving the seller the authority to sell their product at a certain price. The winning bid is always the highest bid on a given product. The transaction happens with the cryptocurrency; Ethereum. 
 
-## Pricing models
+### Pricing models
 Simple bidding: In this model, as long as a request remains open, new offers can be added. Finally, when the auction closes, the offer with the highest bid is selected as the buyer. 
 
-## Withdraw function: 
+### Withdraw function: 
 The buyer has the right to withdraw their offer at any given time. Once the request is complete and a buyer is chosen, he or she will not be obligated to buy the product but will have to pay a five percent penalty to the seller for withdrawing after the bidding time has ended. 
 
 ## Business model 
