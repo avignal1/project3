@@ -1,11 +1,10 @@
-![Nile](https://github.com/avignal1/project3/blob/main/Nile%20project3%20team%20trademark.png "Nile.com: Blockchain Marketplace for Intellectual Properties using cutting edge Auction Smart Contract in Solidty")
+![Nile](https://github.com/avignal1/project3/blob/main/Nile%20project3%20team%20trademark.png "Nile.com: Blockchain Marketplace for Intellectual Properties using cutting edge Auction Smart Contract in Solidity")
 # **Nile**
 
 ## What is Nile?
-Blockchain Marketplace for Intellectual Properties using cutting edge Auction Smart Contract in Solidty
+Blockchain Marketplace for Intellectual Properties using cutting edge Auction Smart Contract in Solidity
 
 ## Description
-This is the Marketplace component of Nile Marketplace
 The Nile Marketplace component provides a trading platform for intellectual property trademarks, copyrights, patents, trade secrets using blockchain-based smart contracts. It can be used to implement auctions using different pricing models and follow the trade transactions to conclusions including successful receipt of the traded item.
 
 ## Goal 
